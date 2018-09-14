@@ -6,6 +6,13 @@
     "lb": "index.js"
   },
   "main": "index.js",
+  "keywords": [
+    "lb-cli",
+    "lb",
+    "cli",
+    "vue-cli",
+    "react-cli"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
