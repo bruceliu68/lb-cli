@@ -4,4 +4,4 @@
 
 npm install lb-cli -g
 
-lb init <name>
+lb init projectName
