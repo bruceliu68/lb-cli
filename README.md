@@ -1,7 +1,7 @@
-# lb-cli
+# tds-cli
 
 # How to Use
 
-npm install lb-cli -g
+npm install tds-cli -g
 
-lb init projectName
+tds init projectName

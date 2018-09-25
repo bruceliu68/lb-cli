@@ -1,17 +1,16 @@
 {
-  "name": "lb-cli",
+  "name": "tds-cli",
   "version": "1.0.0",
-  "description": "Scaffolding tools",
+  "description": "最强同盾前端开发工具",
   "bin": {
-    "lb": "index.js"
+    "tds": "index.js"
   },
   "main": "index.js",
   "keywords": [
-    "lb-cli",
-    "lb",
+    "tds-cli",
+    "tds",
     "cli",
-    "vue-cli",
-    "react-cli"
+    "td-cli"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
