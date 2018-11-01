@@ -1,6 +1,6 @@
 {
   "name": "tds-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "最强同盾前端开发工具",
   "bin": {
     "tds": "index.js"
