@@ -8,7 +8,7 @@ const ora = require('ora');
 const chalk = require('chalk');
 const symbols = require('log-symbols');
 
-program.version('1.0.0', '-v, --version')
+program.version('1.0.1', '-v, --version')
     .command('init <name>')
     .action((name) => {
         if(!fs.existsSync(name)){
@@ -17,11 +17,13 @@ program.version('1.0.0', '-v, --version')
                     type: 'list',
                     message: '请选择需要的模板:',
                     name: 'template',
-                    choices: ['私有云前端标准模板', '私有云内置统一登录标准模板']
+                    choices: ['私有云前端标准模板', '私有云移动端标准模板']
                 }
             ]).then((answers) => {
-                let branch = "master";
-                if (answers.template === '私有云内置统一登录标准模板') branch = "withLogin";
+                let branch = "https://gitlab.tongdun.cn:bo.liu/template-react#master";
+                if (answers.template === '私有云移动端标准模板') {
+                    branch = "https://gitlab.tongdun.cn:bo.liu/template-react-mobile#master";
+                }
                 inquirer.prompt([
                    {
                        name: 'description',
@@ -34,7 +36,7 @@ program.version('1.0.0', '-v, --version')
                ]).then((answers) => {
                    const spinner = ora('正在下载模板...');
                    spinner.start();
-                   download(`https://gitlab.tongdun.cn:bo.liu/template-react#${branch}`, name, {clone: true}, (err) => {
+                   download(branch, name, {clone: true}, (err) => {
                        if(err){
                            spinner.fail();
                            console.log(symbols.error, chalk.red("请链接公司内网！"));
