@@ -8,7 +8,7 @@ const ora = require('ora'); // 下载过程久的话，可以用于显示下载�
 const chalk = require('chalk'); // 可以给终端的字体加上颜色
 const symbols = require('log-symbols'); // 可以在终端上显示出 √ 或 × 等的图标
 
-program.version('2.0.0', '-v, --version')
+program.version('2.1.0', '-v, --version')
     .command('init <name>')
     .action((name) => {
         if (!fs.existsSync(name)) {
@@ -23,22 +23,22 @@ program.version('2.0.0', '-v, --version')
                 let branch;
                 switch (answers.template) {
                     case 'react模板':
-                        branch = "https://github.com/bruceliu68/react-template.git#master";
+                        branch = "https://github.com:bruceliu68/react-template#master";
                         break;
                     case 'typescript模板':
-                        branch = "https://github.com/bruceliu68/react-template-typescript.git#master";
+                        branch = "https://github.com:bruceliu68/react-template-typescript.git#master";
                         break;
                     case 'node模板':
-                        branch = "https://github.com/bruceliu68/node-template.git#master";
+                        branch = "https://github.com:bruceliu68/node-template.git#master";
                         break;
                     case 'egg模板':
-                        branch = "https://github.com/bruceliu68/egg-template.git#master";
+                        branch = "https://github.com:bruceliu68/egg-template.git#master";
                         break;
                     case 'react组件发包npm模板':
-                        branch = "https://github.com/bruceliu68/react-component-template.git#master";
+                        branch = "https://github.com:bruceliu68/react-component-template.git#master";
                         break;
                     case 'typescript组件发包npm模板':
-                        branch = "https://github.com/bruceliu68/react-component-typescript-template.git#master";
+                        branch = "https://github.com:bruceliu68/react-component-typescript-template.git#master";
                         break;
                 }
                 inquirer.prompt([
